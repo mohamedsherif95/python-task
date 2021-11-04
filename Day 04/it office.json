@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Ali",
+        "money": 58756,
+        "mood": "happy",
+        "_Person__health_rate": 100,
+        "emp_id": 3,
+        "_Employee__email": "ali@mail.com",
+        "_Employee__salary": 6000,
+        "distance_to_work": 20,
+        "car": {
+            "name": "fiat 128",
+            "_Car__fuel_rate": 100,
+            "_Car__velocity": 70
+        }
+    },
+    {
+        "name": "Ali",
+        "money": 7577,
+        "mood": "happy",
+        "_Person__health_rate": 100,
+        "emp_id": 3,
+        "_Employee__email": "ali@mail.com",
+        "_Employee__salary": 5000,
+        "distance_to_work": 20,
+        "car": {
+            "name": "fiat 128",
+            "_Car__fuel_rate": 100,
+            "_Car__velocity": 70
+        }
+    }
+]
