@@ -2,7 +2,7 @@ import re
 from Person import Person
 from Car import Car
 
-reg = "^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$"
+reg = r"^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$"
 
 
 class Employee(Person):
@@ -33,7 +33,7 @@ class Employee(Person):
 
     @email.setter
     def email(self, email):
-        if not re.search(reg, email):
+        if not re.fullmatch(reg, email):
             raise Exception("Invalid email format")
         self.__email = email
 
@@ -60,7 +60,8 @@ class Employee(Person):
         self.car.fuel_rate += gas_amount
 
 
-# emp1 = Employee(1, 'moh@mail.com', 3000, "Fiat 128", 20, "Mohamed", 5000)
+# emp_car = {'name': 'fiat 128', 'velocity': 70, 'fuel_rate': 100}
+# emp1 = Employee(1, 'moh@mail.com', 3000, emp_car, 20, "Mohamed", 5000)
 #
 # print(f'fuel:{emp1.car.fuel_rate}')
 # emp1.drive(75)

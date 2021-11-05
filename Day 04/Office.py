@@ -15,8 +15,7 @@ class Office:
 
     @staticmethod
     def calculate_lateness(target_hour, move_hour, distance, velocity):
-        trip_time = distance / velocity
-        arrival_hour = move_hour + trip_time
+        arrival_hour = move_hour + (distance / velocity)
         return arrival_hour > target_hour
 
     def __init__(self, name, employees=None):
@@ -85,6 +84,7 @@ with open("hr office.json", "w") as outfile:
 
 with open("it office.json", "w") as outfile:
     json.dump(it.get_all_employees(), outfile, indent=4)
+
 
 # hr.check_lateness(1, 11)
 # print(hr.get_all_employees())
